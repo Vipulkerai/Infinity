@@ -6,15 +6,15 @@ class Player {
   Color color;
 
   Player(Rect p,Color c){
-    this.player = p;
-    this.color = c;
+    player = p;
+    color = c;
   }
 
   void render(Canvas canvas){
     Paint playerPaint = Paint();
     playerPaint.color = color;
 
-    canvas.drawRect(this.player, playerPaint);
+    canvas.drawRect(player, playerPaint);
   }
 
   void update(double t) {
@@ -22,10 +22,11 @@ class Player {
   }
 
   void updatePosition(TapDownDetails d){
-    //this.player = player.translate(d.globalPosition.dx + 25 , d.globalPosition.dx + 25);
+    player = player.translate(d.globalPosition.dx, d.globalPosition.dx);
   }
 
 //  void setPlayer(x,y){
 //
 //  }
+
 }
