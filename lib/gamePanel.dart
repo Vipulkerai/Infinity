@@ -16,7 +16,7 @@ class GamePanel extends Game {
   }
 
   void initialize() async {
-    player = new Player(Rect.fromLTWH((Constants.SCREEN_SIZE.width/2) + 25, (Constants.SCREEN_SIZE.height/2) + 25, 50, 50),Color(0xff576574));
+    player = new Player(Rect.fromLTWH((Constants.SCREEN_SIZE.width/2) - 25, 3*(Constants.SCREEN_SIZE.height/4), 50, 50),Color(0xff576574));
     rnd = Random();
     resize(await Flame.util.initialDimensions());
   }
